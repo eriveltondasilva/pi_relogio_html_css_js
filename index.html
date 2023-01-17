@@ -3,13 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="author" content="###">
+  <meta name="author" content="Erivelton Da Silva">
   <meta name="description" content="###">
   <meta name="keywords" content="###">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- ---------- Configurações da aba do título do navegador ---------- -->
-  <title>Título da Página</title>
+  <title>Meu Relógio</title>
   <meta name="theme-color" content="#fafafa">
   <link rel="shortcut icon" href="###" type="image/x-icon">
 
@@ -54,13 +54,27 @@
 </head>
 
 <!-- ========== body ========== -->
+
 <body>
 
-  <h1>
-    <i class="fa-solid fa-thumbs-up"></i>
-    Olá mundo!
-  </h1>
+  <body>
 
-</body>
+    <header class="cabecalho l-cabecalho">
+      <div class="cabecalho__titulo">Relógio</div>
+      <div class="cabecalho__item">
+        dark mode
+        <i class="fa-solid fa-moon"></i>
+        <i class="fa-solid fa-sun"></i>
+      </div>
+    </header>
+
+    <main class="tela l-tela">
+      <i class="fa-regular fa-clock"></i>
+      <div class="tela__hora l-tela__hora js-tela__hora">00:00:00</div>
+
+      <div class="tela__sigla l-tela__sigla js-tela__sigla"></div>
+    </main>
+
+  </body>
 
 </html>
