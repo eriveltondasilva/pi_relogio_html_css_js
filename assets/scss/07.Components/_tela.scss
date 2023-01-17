@@ -13,11 +13,14 @@
 }
 
 // objetos ------------------
-.fa-moon {
-    padding: 6px;
-    cursor: pointer;
-}
 
-.fa-sun {
-    display: none;
+.fa-toggle {
+    &-on {
+        display: none;
+    }
+
+    &-off {
+        padding: 6px;
+        cursor: pointer;
+    }
 }

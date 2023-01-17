@@ -380,13 +380,12 @@ textarea {
   gap: 0.25em;
 }
 
-.fa-moon {
+.fa-toggle-on {
+  display: none;
+}
+.fa-toggle-off {
   padding: 6px;
   cursor: pointer;
-}
-
-.fa-sun {
-  display: none;
 }
 
 .cabecalho {
@@ -412,10 +411,10 @@ textarea {
 .dark:root .cabecalho {
   color: var(--color-text);
 }
-.dark:root .fa-moon {
+.dark:root .fa-toggle-off {
   display: none;
 }
-.dark:root .fa-sun {
+.dark:root .fa-toggle-on {
   display: inline;
   padding: 6px;
   cursor: pointer;

@@ -26,7 +26,3 @@ setInterval(relogio, 1000);
 $(".js-cabecalho__icon").click(function () { 
     $("html").toggleClass("dark");    
 });
-
-// $("button").click(function(){
-//     $("h1, h2, p").toggleClass("blue");
-//   });
