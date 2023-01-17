@@ -1,0 +1,14 @@
+.cabecalho {
+    background-color: var(--color-primary);
+    font-family: var(--font-sansserif);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.l-cabecalho {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}

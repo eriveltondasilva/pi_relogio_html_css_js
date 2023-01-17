@@ -1,0 +1,23 @@
+.tela {
+    color: var(--color-text);
+    font-family: var(--font-monospace);
+    font-size: 6rem;
+    font-weight: 600;
+}
+
+.l-tela {
+    @include flex;
+
+    height: calc(100vh - 50px);
+    gap: 0.25em;
+}
+
+// objetos ------------------
+.fa-moon {
+    padding: 6px;
+    cursor: pointer;
+}
+
+.fa-sun {
+    display: none;
+}

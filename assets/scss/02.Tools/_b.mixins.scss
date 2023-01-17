@@ -5,7 +5,7 @@
     width: $width;
 };
 
-@mixin flex($direction: row, $wrap: wrap, $align-horizontal: center, $align-vertical: center) {
+@mixin flex($direction: row, $wrap: nowrap, $align-horizontal: center, $align-vertical: center) {
     display: flex;
     flex-direction: $direction;
     flex-wrap: $wrap;

@@ -2,10 +2,26 @@
 
 .dark:root {
     // variáveis sass
-    $color-primary-dark: dark($color-primary, 75%);
+    $color-primary-dark: dark($color-primary, 60%);
     $color-text-dark: light($color-text, 10%);
-    
+    $color-background-dark: dark($color-background, 10%);
+
     // variáveis css
     --color-primary: #{$color-primary-dark};
     --color-text: #{$color-text-dark};
+    --color-background: #{$color-background-dark};
+
+    .cabecalho {
+        color: var(--color-text);
+    }
+
+    .fa-moon {
+        display: none;
+    }
+
+    .fa-sun {
+        display: inline;
+        padding: 6px;
+        cursor: pointer;
+    }
 }
