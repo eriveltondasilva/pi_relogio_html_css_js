@@ -1,0 +1,27 @@
+// 01.Settings/_b.variables.scss
+
+// variáveis sass
+
+// Colors
+$color-primary: blue;
+$color-secondary: orange;
+$color-text: #222;
+
+// Fonts
+$font-sansserif: "Source Sans Pro", Verdana, Arial, Helvetica, sans-serif;
+$font-serif: 'Source Serif Pro', 'Times', 'Times New Roman', 'Georgia', serif;
+// $meta-font-sansserif: inspect($font-sansserif);
+
+// variáveis css
+
+:root {
+    // variáveis de cores
+    --color-primary: #{$color-primary};
+    --color-secondary: #{$color-secondary};
+    --color-text: #{$color-text};
+
+    // variáveis de fontes
+    // 1 - A função inspect() foi usada para que a fonte "Source Sans Pro"
+    // ... permaneça com as aspas no css final.
+    --font-sansserif: #{inspect($font-sansserif)}; // 1 //
+}

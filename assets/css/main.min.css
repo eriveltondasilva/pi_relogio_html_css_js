@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../../fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf");
+}
+:root {
+  --color-primary: blue;
+  --color-secondary: orange;
+  --color-text: #222;
+  --font-sansserif: "Source Sans Pro", Verdana, Arial, Helvetica, sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+:root {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.dark:root {
+  --color-primary: #0000bf;
+  --color-text: #e9e9e9;
+}
+
+.hidden {
+  display: none !important;
+}/*# sourceMappingURL=main.min.css.map */

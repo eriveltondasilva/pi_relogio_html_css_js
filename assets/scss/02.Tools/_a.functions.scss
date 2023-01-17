@@ -1,0 +1,10 @@
+// 02.Tools/_a.functions.scss
+
+@function dark($color, $percent) {
+    @return mix($color, black, $percent);
+};
+
+@function light($color, $percent) {
+    @return mix($color, white, $percent);
+};
+

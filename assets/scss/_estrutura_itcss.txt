@@ -1,0 +1,51 @@
+///ITCSS
+
+01.Settings | abstracts
+	_.index.scss
+	_a.settings.scss ou _a.global.scss	//
+	_b.variables.scss	//Variáveis sass
+	
+02.Tools | abstracts
+	_.index.scss
+	_a.functions.scss	//Funções sass
+	_b.mixins.scss	//Mixins sass
+	_c.placeholders.scss	//Placeholders sass
+	
+03.Vendors | base
+	_.index.scss
+	_a.normalize.scss	//Reset
+	_b.bootstrap_5.2.3.scss
+	
+04.Generics | base
+	_.index.scss
+	_a.generics.scss	//
+	_b.typography.scss	//
+	
+05.Elements | base
+	_.index.scss
+	_a.elements.scss	//
+	
+06.Layout
+	_.index.scss
+	_a.global.scss	//
+	
+07.Components
+	_.index.scss
+	_a.buttons.scss
+	
+08.Themes
+	_.index.scss
+	_a.dark.scss	//
+	
+09.Utilities
+	_.index.scss
+	_a.utilities.scss	//
+	_b.hacks.scss ou _shame.scss	//
+
+//SMACSS
+
+1.Base
+2.Layout
+3.Module
+4.State
+5.Theme

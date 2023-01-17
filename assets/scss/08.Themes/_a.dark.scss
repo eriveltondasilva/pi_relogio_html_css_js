@@ -1,0 +1,11 @@
+// 08.Themes/_a.dark.scss
+
+.dark:root {
+    // variáveis sass
+    $color-primary-dark: dark($color-primary, 75%);
+    $color-text-dark: light($color-text, 10%);
+    
+    // variáveis css
+    --color-primary: #{$color-primary-dark};
+    --color-text: #{$color-text-dark};
+}
