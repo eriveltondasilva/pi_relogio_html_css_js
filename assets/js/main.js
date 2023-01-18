@@ -49,21 +49,6 @@ function clock() {
             break;
     };
 
-
-    function _hoursAM_PM(h) {
-        if (h < 13) {
-            return h;
-        } else {
-            return h - 12;
-        };
-    };
-
-    function _addZero(i) {
-        if (i < 10) {
-            i = "0" + i;
-        } return i;
-    };
-
     HORA.innerHTML = hour;
     MINUTO.innerHTML = minute;
     SEGUNDO.innerHTML = second;
@@ -71,6 +56,26 @@ function clock() {
 
 };
 
+// funções complementares da função clock()
+// função _addZero() adiciona um zero a esquerda das hora de 1 a 9
+// função _hoursAM_PM() transformar as horas em um formato AM/PM
+function _addZero(i) {
+    if (i < 10) {
+        i = "0" + i;
+    } return i;
+};
+
+function _hoursAM_PM(h) {
+    if (h == 0) {
+        return h + 12;
+    } else if (h < 13) {
+        return h;
+    } else {
+        return h - 12;
+    };
+};
+
+// função setInterval que faz o relógio( clock() ) funcionar
 setInterval(clock, 1000);
 
 
