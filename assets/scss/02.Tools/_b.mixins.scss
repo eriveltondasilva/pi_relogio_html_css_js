@@ -1,6 +1,6 @@
 // 02.Tools/_b.mixins.scss
 
-@mixin box-size($height: 100%, $width: $height) {
+@mixin size($width: 100%, $height: $width) {
     height: $height;
     width: $width;
 };

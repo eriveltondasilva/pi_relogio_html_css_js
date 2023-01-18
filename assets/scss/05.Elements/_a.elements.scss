@@ -1,5 +1,10 @@
 // 05.Elements/_a.elements.scss
 
+body {
+    background-color: var(--color-background);
+    height: inherit;
+}
+
 a {
     text-decoration: none;
 }

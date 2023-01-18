@@ -1,15 +1,29 @@
 .tela {
     color: var(--color-text);
     font-family: var(--font-monospace);
-    font-size: 6rem;
+    font-size: 4rem;
     font-weight: 600;
 }
 
 .l-tela {
     @include flex;
-
     height: calc(100vh - 50px);
-    gap: 0.25em;
+}
+
+.item {
+    cursor: pointer;
+}
+
+.l-item {
+    // display: flex;
+    @include flex;
+    gap: 10px;
+}
+
+.item__hora::after,
+.item__minuto::after {
+    content: ":";
+
 }
 
 // objetos ------------------
@@ -17,6 +31,7 @@
 .fa-toggle {
     &-on {
         display: none;
+
     }
 
     &-off {

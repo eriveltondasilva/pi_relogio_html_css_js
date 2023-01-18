@@ -61,19 +61,25 @@
   <body>
 
     <header class="cabecalho l-cabecalho">
+
       <div class="cabecalho__titulo">Relógio</div>
-      <label class="cabecalho__item">
-        dark mode
+      <div class="cabecalho__item">
+        Dark mode
         <i class="fa-solid fa-toggle-off js-cabecalho__icon"></i>
         <i class="fa-solid fa-toggle-on js-cabecalho__icon"></i>
-      </label>
+      </div>
     </header>
 
     <main class="tela l-tela">
-      <i class="fa-regular fa-clock"></i>
-      <div class="tela__hora l-tela__hora js-tela__hora">00:00:00</div>
+      <div class="item l-item js-item">
 
-      <div class="tela__sigla l-tela__sigla js-tela__sigla"></div>
+        <i class="fa-regular fa-clock item__icon"></i>
+        <div class="item__hora js-item__hora">00</div>
+        <div class="item__minuto js-item__minuto">00</div>
+        <div class="item__segundo js-item__segundo">00</div>
+        <div class="item__sigla js-item__sigla"></div>
+
+      </div>
     </main>
 
   </body>

@@ -319,7 +319,6 @@ template {
 
 html {
   box-sizing: border-box;
-  background-color: var(--color-background);
   height: 100vh;
   margin: 0;
   padding: 0;
@@ -335,6 +334,11 @@ html {
   font-family: var(--font-sansserif);
   font-size: 16px;
   line-height: 1.4;
+}
+
+body {
+  background-color: var(--color-background);
+  height: inherit;
 }
 
 a {
@@ -366,7 +370,7 @@ textarea {
 .tela {
   color: var(--color-text);
   font-family: var(--font-monospace);
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: 600;
 }
 
@@ -377,7 +381,24 @@ textarea {
   justify-content: center;
   align-items: center;
   height: calc(100vh - 50px);
-  gap: 0.25em;
+}
+
+.item {
+  cursor: pointer;
+}
+
+.l-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.item__hora::after,
+.item__minuto::after {
+  content: ":";
 }
 
 .fa-toggle-on {
@@ -396,11 +417,12 @@ textarea {
 }
 
 .l-cabecalho {
+  width: inherit;
   height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
+  padding: 0 20px;
 }
 
 .dark:root {
