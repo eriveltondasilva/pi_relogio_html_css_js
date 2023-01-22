@@ -1,5 +1,6 @@
-// '/assets/js/main.js'
+// *'/assets/js/main.js'
 
+// ---------- Código para fazer o relógio mudar para 24h - AM/PM ----------
 const ITEM = document.querySelector(".js-item"); /* #1 */
 let key = 1;
 
@@ -13,7 +14,7 @@ ITEM.addEventListener('click', () => {
 }
 );
 
-// ----- Código para fazer o relógio funcionar -----
+// ---------- Código para fazer o relógio funcionar ----------
 function clock() {
     // #1 - constantes para selecionar os campos html
     // #2 - constante para capturar a data completo
@@ -56,7 +57,7 @@ function clock() {
 
 };
 
-// funções complementares da função clock()
+// ---------- funções complementares da função clock() ----------
 // função _addZero() adiciona um zero a esquerda das hora de 1 a 9
 // função _hoursAM_PM() transformar as horas em um formato AM/PM
 function _addZero(i) {
@@ -75,11 +76,11 @@ function _hoursAM_PM(h) {
     };
 };
 
-// função setInterval que faz o relógio( clock() ) funcionar
+// ---------- função setInterval que faz o relógio( clock() ) funcionar ----------
 setInterval(clock, 1000);
 
 
-// ---------- Código para ativar e desativar o mode dark
-$(".js-cabecalho__icon").click(function () {
+// ---------- Código para ativar e desativar o mode dark ----------
+$(".js-cabecalho__icon").click(() => {
     $("html").toggleClass("dark");
 });
