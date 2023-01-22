@@ -11,9 +11,9 @@
     --color-text: #{$color-text-dark};
     --color-background: #{$color-background-dark};
 
-
     .cabecalho {
         color: var(--color-text);
+        transition: color 0.2s ease-in-out;
     }
 
     .fa-toggle {
@@ -28,5 +28,8 @@
         }
     }
 
+    body {
+        transition: background-color 0.2s ease-in-out;
+    }
 
 }

@@ -1,6 +1,7 @@
 // *'/assets/js/main.js'
 
-// ---------- Código para fazer o relógio mudar para 24h - AM/PM ----------
+// ---------- Código para fazer o relógio mudar de 24h para AM/PM e vice-versa ----------
+// #1 - contante para selecionar a string da hora
 const ITEM = document.querySelector(".js-item"); /* #1 */
 let key = 1;
 
@@ -16,16 +17,15 @@ ITEM.addEventListener('click', () => {
 
 // ---------- Código para fazer o relógio funcionar ----------
 function clock() {
-    // #1 - constantes para selecionar os campos html
-    // #2 - constante para capturar a data completo
+    // #1 - constantes para selecionar os campos html das horas, dos minutos e dos segundos
+    // #2 - constante para capturar a hora do sistema
     const HORA = document.querySelector(".js-item__hora"); /* #1 */
     const MINUTO = document.querySelector(".js-item__minuto"); /* #1 */
     const SEGUNDO = document.querySelector(".js-item__segundo"); /* #1 */
     const SIGLA = document.querySelector(".js-item__sigla"); /* #1 */
     const DATE = new Date(); /* #2 */
 
-    // #1 - variáveis para extrair minuto e segundo da constante DATE
-    // com a função getMinutes() e getSeconds();
+    // #1 - variáveis para extrair minuto e segundo da constante DATE com a função getMinutes() e getSeconds();
     let minute = _addZero(DATE.getMinutes()); /* #1 */
     let second = _addZero(DATE.getSeconds()); /* #1 */
     let day_night = "";
@@ -57,9 +57,9 @@ function clock() {
 
 };
 
-// ---------- funções complementares da função clock() ----------
-// função _addZero() adiciona um zero a esquerda das hora de 1 a 9
-// função _hoursAM_PM() transformar as horas em um formato AM/PM
+// ---------- funções complementares da função "clock()" ----------
+// função _addZero() adiciona um zero a esquerda das horas de 1 a 9
+// função _hoursAM_PM() transforma as horas em um formato AM/PM
 function _addZero(i) {
     if (i < 10) {
         i = "0" + i;
@@ -76,7 +76,7 @@ function _hoursAM_PM(h) {
     };
 };
 
-// ---------- função setInterval que faz o relógio( clock() ) funcionar ----------
+// ---------- função setInterval() que faz a função "clock()" recarregar a cada 1 segundo ----------
 setInterval(clock, 1000);
 
 
