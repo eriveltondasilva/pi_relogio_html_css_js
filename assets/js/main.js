@@ -1,50 +1,51 @@
 // *'/assets/js/main.js'
 
 // ---------- Código para fazer o relógio mudar de 24h para AM/PM e vice-versa ----------
-// #1 - contante para selecionar a string da hora
+// 1 - constante para selecionar a string da hora
 const ITEM = document.querySelector(".js-item"); /* #1 */
 let key = 1;
 
 ITEM.addEventListener('click', () => {
-    if (key === 0) {
+    if (key > 0) {
+        alert("Você mudou para o formato 24h!");
+        return key = 0;
+    } else {
         alert("Você mudou para o formato AM/PM!");
         return key = 1;
     }
-    alert("Você mudou para o formato 24h!");
-    return key = 0;
 }
 );
 
 // ---------- Código para fazer o relógio funcionar ----------
 function clock() {
-    // #1 - constantes para selecionar os campos html das horas, dos minutos e dos segundos
-    // #2 - constante para capturar a hora do sistema
+    // 1 - constantes para selecionar os campos html das horas, dos minutos e dos segundos
+    // 2 - constante para capturar a hora do sistema
     const HORA = document.querySelector(".js-item__hora"); /* #1 */
     const MINUTO = document.querySelector(".js-item__minuto"); /* #1 */
     const SEGUNDO = document.querySelector(".js-item__segundo"); /* #1 */
     const SIGLA = document.querySelector(".js-item__sigla"); /* #1 */
-    const DATE = new Date(); /* #2 */
+    const DATA = new Date(); /* #2 */
 
-    // #1 - variáveis para extrair minuto e segundo da constante DATE com a função getMinutes() e getSeconds();
-    let minute = _addZero(DATE.getMinutes()); /* #1 */
-    let second = _addZero(DATE.getSeconds()); /* #1 */
+    // 1 - variáveis para extrair minuto e segundo da constante DATA com a função getMinutes() e getSeconds();
+    let minute = _addZero(DATA.getMinutes()); /* #1 */
+    let second = _addZero(DATA.getSeconds()); /* #1 */
     let day_night = "";
     let hour = "";
 
     switch (key) {
         case 1:
-            hour = _addZero(_hoursAM_PM(DATE.getHours()));
+            hour = _addZero(_hoursAM_PM(DATA.getHours()));
 
-            if (DATE.getHours > 12) {
+            if (DATA.getHours() >= 12) {
                 day_night = "PM";
             } else {
-                day_night = "AM";
-            };
+                day_night = "AM"
+            }
 
             break;
 
         case 0:
-            hour = _addZero(DATE.getHours());
+            hour = _addZero(DATA.getHours());
 
         default:
             break;
@@ -62,19 +63,20 @@ function clock() {
 // função _hoursAM_PM() transforma as horas em um formato AM/PM
 function _addZero(i) {
     if (i < 10) {
-        i = "0" + i;
-    } return i;
+        return i = "0" + i;
+    } else {
+        return i;
+    }
 };
 
 function _hoursAM_PM(h) {
     if (h == 0) {
         return h + 12;
-    } else if (h < 13) {
-        return h;
     } else {
-        return h - 12;
+        return h % 12;
     };
 };
+
 
 // ---------- função setInterval() que faz a função "clock()" recarregar a cada 1 segundo ----------
 setInterval(clock, 1000);

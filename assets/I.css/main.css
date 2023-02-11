@@ -339,7 +339,7 @@ html {
 body {
   background-color: var(--color-background);
   height: inherit;
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.1s ease-in-out;
 }
 
 a {
@@ -428,6 +428,10 @@ textarea {
   padding: 0 20px;
 }
 
+.analogico {
+  display: none;
+}
+
 .dark:root {
   --color-primary: #000099;
   --color-text: #e9e9e9;
@@ -451,4 +455,4 @@ textarea {
 
 .hidden {
   display: none !important;
-}/*# sourceMappingURL=main.min.css.map */
+}/*# sourceMappingURL=main.css.map */
