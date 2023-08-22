@@ -1,9 +1,9 @@
 # relógio javascript
 
-### Screenshot
+### Screenshot:
 
 ![](./screenshot.png)
 
-### Links
+### Link:
 
 -   URL do site online: [https://relogio-simples-eriveltonsilva.vercel.app](https://relogio-simples-eriveltonsilva.vercel.app)
