@@ -1,94 +1,87 @@
-<!doctype html>
-<html class="" lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="author"
+            content="Erivelton Da Silva" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="author" content="Erivelton Da Silva">
-  <meta name="description" content="###">
-  <meta name="keywords" content="###">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- ---------- Configurações da aba do título do navegador ---------- -->
+        <title>Meu Relógio</title>
+        <link
+            rel="shortcut icon"
+            href="###"
+            type="image/x-icon" />
 
-  <!-- ---------- Configurações da aba do título do navegador ---------- -->
-  <title>Meu Relógio</title>
-  <meta name="theme-color" content="#fafafa">
-  <link rel="shortcut icon" href="###" type="image/x-icon">
+        <!-- ---------- Fonts: ### ---------- -->
+        <!-- Use este espaço para importar suas fontes -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
+            rel="stylesheet" />
 
-  <!-- Arquivo para mostrar uma prévia do conteúdo ou uma imagem do site ao -->
-  <!-- ... compartilhar o endereço do site -->
-  <!-- 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  -->
+        <!-- ---------- Icons: fontawesome_6.x | ionicons_5.5.2 ---------- -->
+        <!-- 1 - Caso não queira usar os icones fontawesome ou precise usar -->
+        <!--     outros icones, descomente os icones IonIcons abaixo -->
+        <script
+            src="https://kit.fontawesome.com/39b73d1046.js"
+            crossorigin="anonymous"></script>
 
-  <!-- ---------- Fonts: ### ---------- -->
-  <!-- Use este espaço para importar suas fontes -->
-  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+        <!-- ---------- Style: bootstrap_5.2.3 ---------- -->
+        <!-- 1 - Caso não queira usar o bootstrap, reative -->
+        <!--     o normalize '../assets/scss/vendors/_a.normalize8.0.1.scss' -->
+        <!--     em '../assets/scss/vendors/_.index.scss' para ter um reset. -->
+        <!-- <link rel="stylesheet" href="/assets/css/vendor/bootstrap_5.2.3.min.css"> #1 -->
+        <link
+            rel="stylesheet"
+            href="assets/I.css/main.min.css" />
 
-  <!-- ---------- Icons: fontawesome_6.x | ionicons_5.5.2 ---------- -->
-  <!-- 1 - Caso não queira usar os icones fontawesome ou precise usar -->
-  <!--     outros icones, descomente os icones IonIcons abaixo -->
-  <script src="https://kit.fontawesome.com/39b73d1046.js" crossorigin="anonymous"></script>
+        <!-- ---------- Script: modernizr_3.11.2 | jquery_3.6.3 | bootstrap_5.2.3 ---------- -->
+        <!-- 1 - Use este arquivo caso você queira adicionar algum plug -->
+        <script
+            src="assets/js/vendor/modernizr_3.11.2.min.js"
+            defer></script>
+        <script
+            src="assets/js/vendor/jquery_3.6.3.min.js"
+            defer></script>
+        <script
+            src="assets/js/vendor/bootstrap_5.2.3.bundle.min.js"
+            defer></script>
+        <script
+            src="assets/js/main.js"
+            defer></script>
+    </head>
 
-  <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> -->
-  <!-- 1 -->
-  <!-- <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> --> <!-- #1 -->
+    <!-- ========== body ========== -->
 
+    <body>
+        <main>
+            <header class="cabecalho l-cabecalho">
+                <div class="cabecalho__titulo">Relógio</div>
+                <div class="cabecalho__item">
+                    Dark mode
+                    <i class="fa-solid fa-toggle-off js-cabecalho__icon"></i>
+                    <i class="fa-solid fa-toggle-on js-cabecalho__icon"></i>
+                </div>
+            </header>
 
-  <!-- ---------- Style: bootstrap_5.2.3 ---------- -->
-  <!-- 1 - Caso não queira usar o bootstrap, reative -->
-  <!--     o normalize '../assets/scss/vendors/_a.normalize8.0.1.scss' -->
-  <!--     em '../assets/scss/vendors/_.index.scss' para ter um reset. -->
-  <!-- <link rel="stylesheet" href="/assets/css/vendor/bootstrap_5.2.3.min.css"> #1 -->
-  <link rel="stylesheet" href="assets/I.css/main.min.css">
+            <section class="analogico">
+                <div class="analogico__background"></div>
+            </section>
 
-  <!-- ---------- Script: modernizr_3.11.2 | jquery_3.6.3 | bootstrap_5.2.3 ---------- -->
-  <!-- 1 - Use este arquivo caso você queira adicionar algum plug -->
-  <script src="assets/js/vendor/modernizr_3.11.2.min.js" defer></script>
-  <script src="assets/js/vendor/jquery_3.6.3.min.js" defer></script>
-  <script src="assets/js/vendor/bootstrap_5.2.3.bundle.min.js" defer></script>
-  <script src="assets/js/main.js" defer></script>
-
-  <!-- <script src="/Assets/js/_plugins.js" defer></script> --> <!-- #1 -->
-
-</head>
-
-<!-- ========== body ========== -->
-
-
-<body>
-
-  <main>
-
-    <header class="cabecalho l-cabecalho">
-
-      <div class="cabecalho__titulo">Relógio</div>
-      <div class="cabecalho__item">
-        Dark mode
-        <i class="fa-solid fa-toggle-off js-cabecalho__icon"></i>
-        <i class="fa-solid fa-toggle-on js-cabecalho__icon"></i>
-      </div>
-    </header>
-
-    <section class="analogico">
-      <div class="analogico__background"></div>
-    </section>
-
-    <section class="tela l-tela">
-      <div class="item l-item js-item" title="Clique para mudar formato de horas.">
-
-        <i class="fa-regular fa-clock item__icon"></i>
-        <div class="item__hora js-item__hora">00</div>
-        <div class="item__minuto js-item__minuto">00</div>
-        <div class="item__segundo js-item__segundo">00</div>
-        <div class="item__sigla js-item__sigla"></div>
-
-      </div>
-    </section>
-    
-  </main>
-
-</body>
-
+            <section class="tela l-tela">
+                <div
+                    class="item l-item js-item"
+                    title="Clique para mudar formato de horas.">
+                    <i class="fa-regular fa-clock item__icon"></i>
+                    <div class="item__hora js-item__hora">00</div>
+                    <div class="item__minuto js-item__minuto">00</div>
+                    <div class="item__segundo js-item__segundo">00</div>
+                    <div class="item__sigla js-item__sigla"></div>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>
